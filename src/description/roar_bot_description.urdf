@@ -133,22 +133,12 @@
     <origin xyz="0.0 0.0 ${-(iphone_thickness/2)}" rpy="-1.57 1.57 0"/>
 </joint>
 
-<!-- Caster Wheel -->
-<!-- <link name="front_caster">
-    <visual>
-        <geometry>
-            <sphere radius="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
-        </geometry>
-        <material name="Cyan">
-            <color rgba="0 1.0 1.0 1.0"/>
-        </material>
-    </visual>
-</link>
+<link name="sensors_link"/>
 
-<joint name="caster_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="front_caster"/>
-    <origin xyz="${caster_xoff} 0.0 ${-(base_height/2)}" rpy="0 0 0"/>
-</joint> -->
+<joint name="sensors_joint" type="fixed">
+    <parent link="iphone_link"/>
+    <child link="sensors_link"/>
+    <origin xyz="0.0 0.0 0.0" rpy="3.14 0 0"/>
+</joint>
 
 </robot>
